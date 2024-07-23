@@ -5,12 +5,11 @@ def update():
     time_string = strftime("%X %p")
     time_label.config(text=time_string)
 
-    time_label.after(1000, update)
 
     day_string = strftime("%a, %d %b %Y", gmtime())
     day_label.config(text=day_string)
 
-    day_label.after(1000, update)
+    window.after(1000, update)
 
 window = Tk()
 
